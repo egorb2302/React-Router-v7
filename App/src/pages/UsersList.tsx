@@ -52,7 +52,9 @@ export default function UsersList() {
 
     return (
         <div>
-            <h1>Users:</h1>
+            <div className="w-full bg-zinc-50 h-15 flex items-center pl-10 text-3xl font-semibold">
+                <h1>Users:</h1>
+            </div>
             <input type="text" onChange={(e) => updateFilter('mark', e.target.value)} placeholder="mark" />
             <input type="text" onChange={(e) => updateFilter('name', e.target.value)} placeholder="name"/>
             <button onClick={resetFilters}>Show All</button>   

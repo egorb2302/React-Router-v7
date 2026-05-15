@@ -14,15 +14,27 @@ export default function DashboardLayout({ onLogout }: DashboardLogoutProps) {
 
     return (
         <div style={{ display: 'flex', minHeight: '100vh' }}>
-            <aside style={{ width: '250px', borderRight: '1px solid #ccc', padding: '20px' }}>
-                <h1>Dashboard</h1>
-                <ul>
-                    <li><NavLink to="/dashboard/users">All users</NavLink></li>
-                    <li><NavLink to="/dashboard/settings">Settings</NavLink></li>
-                    <button onClick={handleLogout}>Quit & Logout</button>
+            <aside className="w-3xs border-r-2 p-5 bg-cyan-950">
+                <div className="bg-zinc-50 w-fit p-4 pr-6 rounded-2xl mb-6">
+                    <h1 className="text-3xl font-semibold">Dashboard<span className="ml-2 text-3xl font-bold text-blue-950">.</span></h1>
+                </div>
+                <ul className="flex-col flex gap-3">
+                    <div className="cursor-pointer">
+                        <li className="w-40 p-2 bg-zinc-50 rounded-xl font-semibold text-center">
+                            <NavLink to="/dashboard/users">All users</NavLink>
+                        </li>
+                    </div>
+                    <div className="cursor-pointer">
+                        <li className="w-40 p-2 bg-zinc-50 rounded-xl font-semibold text-center">
+                            <NavLink to="/dashboard/settings">Settings</NavLink>
+                        </li>
+                    </div>  
+                    <button className="w-40 p-2 bg-red-800 text-white text-xs 
+                    tracking-wider font-semibold rounded-b-2xl cursor-pointer" 
+                    onClick={handleLogout}>Quit & Logout</button>
                 </ul>
             </aside>
-            <main style={{ flex: 1, padding: '20px' }}>
+            <main className="w-full">
                 <Outlet />
             </main>
         </div>

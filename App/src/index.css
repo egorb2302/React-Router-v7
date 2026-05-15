@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+body {
+    background-color: lightblue;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
