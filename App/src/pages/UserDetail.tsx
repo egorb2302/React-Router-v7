@@ -15,7 +15,7 @@ export default function UserDetail() {
     if (!user) return <p>User is not found...</p>
 
     return (
-        <div>
+        <div data-testid="div-element">
             <h1>{user.name}</h1>
             <h2>{user.info}</h2>
             <p>Mark for test: {user.mark}</p>
